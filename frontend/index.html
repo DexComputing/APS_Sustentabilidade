@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APS - Checklist ISO 14000</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌿 Checklist de Conformidade ISO 14000</h1>
+            <p>Sistema de Gestão Ambiental - Monitoramento e Melhoria Contínua</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('checklist')">📋 Checklist</button>
+            <button class="tab-btn" onclick="showTab('conformidades')">✅ Itens em Conformidade</button>
+            <button class="tab-btn" onclick="showTab('relatorio')">⚠️ Não Conformidades</button>
+            <button class="tab-btn" onclick="showTab('estatisticas')">📈 Estatísticas</button>
+        </div>
+
+        <!-- Aba Checklist -->
+        <div id="tab-checklist" class="tab-content active">
+            <div class="form-group">
+                <label for="setor-select">Selecione o Setor:</label>
+                <select id="setor-select" onchange="carregarChecklist()">
+                    <option value="">Carregando setores...</option>
+                </select>
+            </div>
+
+            <div id="checklist-items" class="checklist-items">
+                <!-- Itens serão carregados aqui -->
+            </div>
+        </div>
+
+        <!-- Aba Itens em Conformidade (NOVA) -->
+        <div id="tab-conformidades" class="tab-content">
+            <h2>✅ Itens em Conformidade (Últimas Inspeções)</h2>
+            <div id="conformidades-list">
+                <p>Carregando...</p>
+            </div>
+        </div>
+
+        <!-- Aba Relatório de Não Conformidades -->
+        <div id="tab-relatorio" class="tab-content">
+            <h2>⚠️ Itens Não Conformes (Últimas Inspeções)</h2>
+            <div id="relatorio-nc">
+                <p>Carregando...</p>
+            </div>
+        </div>
+
+        <!-- Aba Estatísticas -->
+        <div id="tab-estatisticas" class="tab-content">
+            <h2>📊 Conformidade por Setor</h2>
+            <div id="estatisticas">
+                <p>Carregando...</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Atividades Práticas Supervisionadas - Ciência da Computação</p>
+            <p>Tema: Gestão Ambiental baseada na ISO 14000</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
